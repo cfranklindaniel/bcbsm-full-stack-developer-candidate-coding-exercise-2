@@ -2,7 +2,7 @@
 
 ## Requirements:
 1.	Create a single page web application with a registration and login screen
-2.	On the registration provide the following inputs with validation:
+2.	On the registration page provide the following inputs with validation:
     a. First Name (Text field)  
   	b. Last Name (Text field)  
   	c. Date of birth (Date - MM-DD-YYYY)  
