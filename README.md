@@ -13,8 +13,9 @@
   	h. Username (Text field) - alpha-numeric with no special characters  
   	i. Password (Text field) - alpha-numberic and must contain 1 special character, at least one capital letter and at least one number    	
 4.	Demonstrate user login and authentication
-5.	Upon login show the user their profile page and allow update of first name, last name, address. All other fields should not be editable.
-6.	Fork this repository for your code changes
+5.	Upon login show the user their profile page only and allow update of first name, last name, address. All other fields should not be editable.
+6.	Your REST API should have one endpoint for both SAVE and UPDATE functionality.
+7.	Fork this repository for your code changes
 
 ## Tech Stack:  
 Springboot  
