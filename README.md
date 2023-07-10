@@ -1,14 +1,20 @@
 # BCBSM Full Stack Developer Candidate Coding Exercise (Form validation)
 
 ## Requirements:
-1.	Create a single page web application with a login screen (username, password)
-2.	Demonstrate user login and authentication
-3.	Upon login present member with ability to enter their address (2 line address, City, State and Zip). User must be logged in to access this page.
-4.	Validate the user input based on the rules below
-5.	Create a REST service to receive the document and store the document in a database with the below structure:  
-
-6.	Display success message on web page and show document list using angular data table with filters and sorting option
-7.	Fork this repository and create PR with your code changes
+1.	Create a single page web application with a registration and login screen
+2.	On the registration provide the following inputs with validation:
+    a. First Name (Text field)  
+  	b. Last Name (Text field)  
+  	c. Date of birth (Date - MM-DD-YYYY)  
+  	d. Street Address (Text area)  
+  	e. City (Text field)  
+  	f. State (Drop down selection)  
+  	g. Zip code (Numeric field - XXXXX)  
+  	h. Username (Text field) - alpha-numeric with no special characters  
+  	i. Password (Text field) - alpha-numberic and must contain 1 special character, at least one capital letter and at least one number    	
+4.	Demonstrate user login and authentication
+5.	Upon login show the user their profile page and allow update of first name, last name, address. All other fields should not be editable.
+6.	Fork this repository for your code changes
 
 ## Tech Stack:  
 Springboot  
