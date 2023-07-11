@@ -1,0 +1,96 @@
+﻿<h1>{{title}}</h1>
+<form *ngIf="!loading" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="mb-3 col">
+      <label class="form-label">First Name</label>
+      <input type="text" formControlName="firstName" class="form-control"
+             [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"/>
+      <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+        <div *ngIf="f.firstName.errors.required">First Name is required</div>
+      </div>
+    </div>
+    <div class="mb-3 col">
+      <label class="form-label">Last Name</label>
+      <input type="text" formControlName="lastName" class="form-control"
+             [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }"/>
+      <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+        <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="mb-3 col">
+      <label class="form-label">Street Address</label>
+      <textarea type="text" formControlName="streetAddress" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f.streetAddress.errors }"></textarea>
+      <div *ngIf="submitted && f.streetAddress.errors" class="invalid-feedback">
+        <div *ngIf="f.streetAddress.errors.required">Street Address is required</div>
+      </div>
+    </div>
+    <div class="mb-3 col">
+      <label class="form-label">City</label>
+      <input type="text" formControlName="city" class="form-control"
+             [ngClass]="{ 'is-invalid': submitted && f.city.errors }"/>
+      <div *ngIf="submitted && f.city.errors" class="invalid-feedback">
+        <div *ngIf="f.city.errors.required">City is required</div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="mb-3 col">
+      <label class="form-label">State</label>
+      <select type="text" formControlName="state" class="form-control"
+              [ngClass]="{ 'is-invalid': submitted && f.state.errors }">
+        <option></option>
+        <option>MI</option>
+        <option>CT</option>
+      </select>
+      <div *ngIf="submitted && f.state.errors" class="invalid-feedback">
+        <div *ngIf="f.state.errors.required">State is required</div>
+      </div>
+    </div>
+        <div class="mb-3 col">
+          <label class="form-label">Zip</label>
+          <input type="number" formControlName="zip" class="form-control"
+                 [ngClass]="{ 'is-invalid': submitted && f.zip.errors }"/>
+          <div *ngIf="submitted && f.zip.errors" class="invalid-feedback">
+            <div *ngIf="f.zip.errors.required">Zip is required</div>
+          </div>
+        </div>
+
+
+  </div>
+  <div class="row">
+    <div class="mb-3 col">
+      <label class="form-label">Username:</label>
+      {{f.username.value}}
+      <!--<input type="text" formControlName="username" class="form-control"
+             [ngClass]="{ 'is-invalid': submitted && f.username.errors }"/>
+      <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+        <div *ngIf="f.username.errors.required">Username is required</div>
+      </div>-->
+    </div>
+    <div class="mb-3 col">
+      <label class="form-label">
+        Password:
+      </label>
+      *********
+      <!--<input type="password" [disabled]="disableTextBox" formControlName="password" class="form-control"
+             [ngClass]="{ 'is-invalid': submitted && f.password.errors }"/>
+      <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+        <div *ngIf="f.password.errors.required">Password is required</div>
+        <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+      </div>-->
+    </div>
+  </div>
+  <div class="mb-3">
+    <button [disabled]="submitting" class="btn btn-primary">
+      <span *ngIf="submitting" class="spinner-border spinner-border-sm me-1"></span>
+      Save
+    </button>
+    <a routerLink="/users" class="btn btn-link">Cancel</a>
+  </div>
+</form>
+<div *ngIf="loading" class="text-center m-5">
+  <span class="spinner-border spinner-border-lg align-center"></span>
+</div>
